@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shashwat Overseas LLP – Perfection in Every Creation</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1a52cc;--blue-dark:#0d2e8a;--gold:#c9981a;--gold-light:#e8b830;--sky:#29a8e0;--cream:#fdf8f0;--dark:#0d1f4c;--text:#3a3a5c;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Lato',sans-serif;color:var(--text);background:#fff;}
+
+/* NAV */
+nav{background:var(--blue);padding:0 40px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:999;box-shadow:0 3px 15px rgba(0,0,0,.35);height:74px;}
+.nav-brand img{height:54px;display:block;}
+.nav-brand .logo-fallback{display:none;line-height:1.2;}
+.nav-brand .logo-main{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:#fff;}
+.nav-brand .logo-sub{font-size:10px;letter-spacing:4px;color:var(--sky);text-transform:uppercase;}
+.nav-brand .logo-tag{font-size:9px;letter-spacing:2px;color:var(--gold-light);}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:5px;}
+.hamburger span{display:block;width:24px;height:2px;background:#fff;border-radius:2px;transition:.3s;}
+.nav-links{display:flex;gap:4px;}
+.nav-links a{color:rgba(255,255,255,.85);text-decoration:none;padding:7px 16px;border-radius:3px;font-size:14px;letter-spacing:.5px;transition:.2s;font-weight:600;}
+.nav-links a:hover{color:var(--gold-light);background:rgba(255,255,255,.08);}
+
+/* HERO */
+.hero{background:linear-gradient(150deg,var(--blue-dark) 0%,var(--blue) 60%,#1a3f9a 100%);color:#fff;text-align:center;padding:90px 20px 105px;position:relative;overflow:hidden;}
+.hero-pattern{position:absolute;inset:0;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23fff' d='M30 0C30 0 40 10 30 20C20 10 30 0 30 0ZM30 40C30 40 40 50 30 60C20 50 30 40 30 40ZM0 30C0 30 10 20 20 30C10 40 0 30 0 30ZM40 30C40 30 50 20 60 30C50 40 40 30 40 30Z'/%3E%3C/svg%3E");}
+.hero-ornament{font-size:22px;color:var(--gold-light);letter-spacing:12px;margin-bottom:18px;}
+.hero h1{font-family:'Playfair Display',serif;font-size:52px;font-weight:700;line-height:1.25;margin-bottom:14px;}
+.hero h1 em{color:var(--gold-light);font-style:normal;}
+.hero .tagline{font-size:12px;letter-spacing:5px;color:var(--sky);text-transform:uppercase;margin-bottom:30px;}
+.hero .desc{max-width:600px;margin:0 auto 20px;font-size:17px;line-height:1.85;color:rgba(255,255,255,.82);font-weight:300;}
+.hero-badges{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin-bottom:42px;}
+.badge{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:8px 20px;border-radius:30px;font-size:13px;color:var(--gold-light);letter-spacing:.5px;backdrop-filter:blur(4px);}
+.btn-gold{background:linear-gradient(135deg,var(--gold-light),var(--gold));color:var(--dark);padding:14px 40px;border-radius:4px;text-decoration:none;font-weight:700;font-size:14px;letter-spacing:1.5px;text-transform:uppercase;display:inline-block;transition:.3s;box-shadow:0 4px 20px rgba(201,152,26,.4);}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 8px 30px rgba(201,152,26,.5);}
+.scroll-down{margin-top:48px;font-size:22px;color:rgba(255,255,255,.3);animation:bounce 2s infinite;}
+@keyframes bounce{0%,100%{transform:translateY(0);}50%{transform:translateY(7px);}}
+
+/* TRUST BAR */
+.trust-bar{background:var(--dark);padding:20px 40px;display:flex;justify-content:center;align-items:center;gap:0;flex-wrap:wrap;}
+.trust-item{display:flex;align-items:center;gap:10px;padding:10px 30px;border-right:1px solid rgba(255,255,255,.12);}
+.trust-item:last-child{border-right:none;}
+.trust-item .t-icon{font-size:22px;}
+.trust-item .t-text{font-size:13px;color:rgba(255,255,255,.7);line-height:1.3;}
+.trust-item .t-num{font-family:'Playfair Display',serif;font-size:18px;color:var(--gold-light);font-weight:700;display:block;}
+
+/* SECTIONS */
+section{padding:75px 40px;}
+.sec-head{text-align:center;margin-bottom:55px;}
+.sec-ornament{font-size:18px;color:var(--gold);letter-spacing:8px;margin-bottom:10px;}
+.sec-head h2{font-family:'Playfair Display',serif;font-size:38px;color:var(--blue);margin-bottom:14px;}
+.divider{width:70px;height:3px;background:linear-gradient(90deg,var(--blue),var(--gold-light));margin:0 auto;border-radius:2px;}
+
+/* PRODUCTS */
+.products{background:var(--cream);}
+.prod-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:28px;max-width:1060px;margin:0 auto;}
+.prod-card{background:#fff;border-radius:10px;padding:38px 24px;text-align:center;box-shadow:0 4px 24px rgba(26,82,204,.07);border-top:4px solid var(--gold);transition:.3s;position:relative;overflow:hidden;}
+.prod-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--sky));transform:scaleX(0);transform-origin:left;transition:.3s;}
+.prod-card:hover{transform:translateY(-8px);box-shadow:0 12px 35px rgba(26,82,204,.15);}
+.prod-card:hover::after{transform:scaleX(1);}
+.prod-icon{font-size:44px;margin-bottom:18px;}
+.prod-card h3{font-family:'Playfair Display',serif;font-size:21px;color:var(--blue);margin-bottom:10px;}
+.prod-card p{font-size:14px;color:#666;line-height:1.6;}
+
+/* ABOUT */
+.about-inner{max-width:980px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;}
+.about-text p{font-size:16px;line-height:1.9;color:#555;margin-bottom:16px;}
+.highlight{color:var(--blue);font-weight:700;}
+.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.stat{background:linear-gradient(135deg,var(--blue),var(--blue-dark));color:#fff;padding:28px 20px;border-radius:10px;text-align:center;box-shadow:0 6px 20px rgba(13,46,138,.25);}
+.stat .num{font-family:'Playfair Display',serif;font-size:30px;color:var(--gold-light);font-weight:700;margin-bottom:6px;}
+.stat .lbl{font-size:12px;color:rgba(255,255,255,.75);letter-spacing:1px;text-transform:uppercase;}
+
+/* WHY US */
+.why{background:var(--cream);}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px;max-width:1060px;margin:0 auto;}
+.why-card{background:#fff;border-radius:10px;padding:32px 26px;box-shadow:0 4px 20px rgba(26,82,204,.06);border-left:4px solid var(--blue);transition:.3s;}
+.why-card:hover{transform:translateY(-4px);border-left-color:var(--gold);}
+.why-card .w-icon{font-size:32px;margin-bottom:14px;}
+.why-card h4{font-family:'Playfair Display',serif;font-size:19px;color:var(--blue);margin-bottom:10px;}
+.why-card p{font-size:14px;color:#666;line-height:1.65;}
+
+/* CONTACT */
+.contact{background:#fff;}
+.contact-grid{max-width:960px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:start;}
+.contact-info h3{font-family:'Playfair Display',serif;font-size:26px;color:var(--blue);margin-bottom:28px;}
+.citem{display:flex;align-items:flex-start;gap:15px;margin-bottom:22px;}
+.cicon{font-size:24px;min-width:32px;line-height:1.4;}
+.cdetail{font-size:15px;line-height:1.75;color:#555;}
+.cdetail a{color:var(--blue);text-decoration:none;font-weight:700;transition:.2s;}
+.cdetail a:hover{color:var(--gold);}
+.cdetail strong{display:block;font-size:11px;color:#999;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px;}
+.map-wrap{border-radius:12px;overflow:hidden;box-shadow:0 6px 25px rgba(0,0,0,.12);border:3px solid #fff;}
+.map-link{display:block;text-align:center;margin-top:10px;font-size:13px;color:var(--blue);font-weight:700;text-decoration:none;}
+.map-link:hover{color:var(--gold);}
+
+/* FOOTER */
+footer{background:var(--dark);color:rgba(255,255,255,.6);text-align:center;padding:40px 20px;}
+.footer-logo img{height:56px;margin-bottom:14px;opacity:.9;}
+.footer-logo .fallback-name{font-family:'Playfair Display',serif;font-size:24px;color:var(--gold-light);margin-bottom:6px;}
+.footer-tag{font-size:11px;letter-spacing:4px;color:var(--sky);text-transform:uppercase;margin-bottom:16px;}
+footer p{font-size:13px;margin-top:8px;}
+.f-links{margin:14px 0;display:flex;justify-content:center;gap:24px;flex-wrap:wrap;}
+.f-links a{color:rgba(255,255,255,.5);text-decoration:none;font-size:13px;transition:.2s;}
+.f-links a:hover{color:var(--gold-light);}
+
+/* MOBILE */
+@media(max-width:768px){
+  nav{padding:0 20px;}
+  .hamburger{display:flex;}
+  .nav-links{display:none;position:absolute;top:74px;left:0;right:0;background:var(--blue-dark);flex-direction:column;padding:14px 0;gap:0;}
+  .nav-links.open{display:flex;}
+  .nav-links a{padding:13px 28px;border-radius:0;}
+  .hero h1{font-size:34px;}
+  .trust-bar{gap:0;padding:14px 20px;}
+  .trust-item{padding:10px 16px;}
+  .about-inner,.contact-grid{grid-template-columns:1fr;}
+  section{padding:55px 20px;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">
+    <img src="logo.png" alt="Shashwat Overseas LLP"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+    <div class="logo-fallback">
+      <div class="logo-main">shashwat<sup style="font-size:10px">®</sup></div>
+      <div class="logo-sub">Overseas LLP</div>
+      <div class="logo-tag">Perfection in Every Creation</div>
+    </div>
+  </div>
+  <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#about">About</a>
+    <a href="#why">Why Us</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-pattern"></div>
+  <div style="position:relative;z-index:1;">
+    <div class="hero-ornament">✦ &nbsp; ✦ &nbsp; ✦</div>
+    <h1>Crafting <em>Elegance</em>,<br>Weaving Traditions</h1>
+    <p class="tagline">Perfection in Every Creation</p>
+    <p class="desc">A premier textile sourcing &amp; manufacturing house from Surat — the Textile Capital of India — with over <strong style="color:var(--gold-light)">30 years of expertise</strong> in ladies ethnic &amp; western wear, serving clients across India and beyond.</p>
+    <div class="hero-badges">
+      <span class="badge">🏭 Export-Oriented Unit</span>
+      <span class="badge">⭐ 30+ Years Experience</span>
+      <span class="badge">🤝 Customer-First Approach</span>
+      <span class="badge">📦 B2B &amp; Wholesale</span>
+    </div>
+    <a href="#contact" class="btn-gold">Enquire Now</a>
+    <div class="scroll-down">↓</div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item">
+    <span class="t-icon">🕐</span>
+    <div class="t-text"><span class="t-num">30+</span>Years of Experience</div>
+  </div>
+  <div class="trust-item">
+    <span class="t-icon">🌍</span>
+    <div class="t-text"><span class="t-num">Export</span>Oriented Setup</div>
+  </div>
+  <div class="trust-item">
+    <span class="t-icon">⭐</span>
+    <div class="t-text"><span class="t-num">100%</span>Customer Satisfaction</div>
+  </div>
+  <div class="trust-item">
+    <span class="t-icon">👗</span>
+    <div class="t-text"><span class="t-num">500+</span>Product Styles</div>
+  </div>
+  <div class="trust-item">
+    <span class="t-icon">🏙️</span>
+    <div class="t-text"><span class="t-num">Surat</span>Textile Capital of India</div>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<section class="products" id="products">
+  <div class="sec-head">
+    <div class="sec-ornament">✦ &nbsp; ✦ &nbsp; ✦</div>
+    <h2>Our Collections</h2>
+    <div class="divider"></div>
+  </div>
+  <div class="prod-grid">
+    <div class="prod-card">
+      <div class="prod-icon">🥻</div>
+      <h3>Sarees</h3>
+      <p>Premium silk, chiffon &amp; georgette sarees — crafted with the finest artistry Surat is globally renowned for.</p>
+    </div>
+    <div class="prod-card">
+      <div class="prod-icon">👗</div>
+      <h3>Lehengas</h3>
+      <p>Bridal &amp; festive lehengas with intricate embellishments, vibrant colours &amp; rich fabrics for every celebration.</p>
+    </div>
+    <div class="prod-card">
+      <div class="prod-icon">👘</div>
+      <h3>Suits &amp; Dress Materials</h3>
+      <p>Elegant salwar suits, dress materials &amp; kurta sets crafted for everyday grace and special occasions alike.</p>
+    </div>
+    <div class="prod-card">
+      <div class="prod-icon">👖</div>
+      <h3>Jeans &amp; Western Wear</h3>
+      <p>Contemporary jeans &amp; fusion styles blending comfort with modern fashion sensibility for today's woman.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="sec-head">
+    <div class="sec-ornament">✦ &nbsp; ✦ &nbsp; ✦</div>
+    <h2>About Shashwat Overseas</h2>
+    <div class="divider"></div>
+  </div>
+  <div class="about-inner">
+    <div class="about-text">
+      <p>Shashwat Overseas LLP is a trusted name in the Indian textile industry, rooted in <span class="highlight">Surat, Gujarat</span> — the nation's undisputed textile capital. With over <span class="highlight">30 years of industry experience</span>, we have built deep expertise in sourcing and manufacturing premium ladies wear — from timeless ethnic classics to contemporary western styles.</p>
+      <p>Our operations are structured as an <span class="highlight">export-oriented setup</span>, enabling us to meet the quality standards and delivery requirements of both domestic and international clients with consistent excellence.</p>
+      <p>At the heart of everything we do is a singular commitment: <span class="highlight">Customer Satisfaction above all</span>. From the first consultation to final delivery, every interaction is guided by transparency, reliability, and respect for your business goals.</p>
+      <p>We believe that <span class="highlight">Perfection in Every Creation</span> is not just our tagline — it is the promise we honour with every thread, every stitch, and every shipment.</p>
+    </div>
+    <div class="about-stats">
+      <div class="stat"><div class="num">30+</div><div class="lbl">Years in Business</div></div>
+      <div class="stat"><div class="num">Export</div><div class="lbl">Ready Setup</div></div>
+      <div class="stat"><div class="num">500+</div><div class="lbl">Product Styles</div></div>
+      <div class="stat"><div class="num">⭐</div><div class="lbl">Customer First</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why" id="why">
+  <div class="sec-head">
+    <div class="sec-ornament">✦ &nbsp; ✦ &nbsp; ✦</div>
+    <h2>Why Choose Us</h2>
+    <div class="divider"></div>
+  </div>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="w-icon">🕐</div>
+      <h4>30+ Years of Expertise</h4>
+      <p>Three decades of hands-on experience in textile sourcing and manufacturing — giving us an unmatched understanding of fabrics, markets, and customer needs.</p>
+    </div>
+    <div class="why-card">
+      <div class="w-icon">🌍</div>
+      <h4>Export-Oriented Setup</h4>
+      <p>Our infrastructure and quality processes are designed to international standards, making us a reliable partner for both domestic and global buyers.</p>
+    </div>
+    <div class="why-card">
+      <div class="w-icon">⭐</div>
+      <h4>100% Customer Satisfaction</h4>
+      <p>We go the extra mile for every client — from flexible MOQs to on-time delivery and post-sale support. Your satisfaction is our measure of success.</p>
+    </div>
+    <div class="why-card">
+      <div class="w-icon">🧵</div>
+      <h4>Surat's Finest Craftsmanship</h4>
+      <p>Headquartered in the textile capital of India, we leverage Surat's world-class weaving &amp; processing ecosystem to deliver superior quality at competitive pricing.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="sec-head">
+    <div class="sec-ornament">✦ &nbsp; ✦ &nbsp; ✦</div>
+    <h2>Contact Us</h2>
+    <div class="divider"></div>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <h3>Get In Touch</h3>
+      <div class="citem">
+        <span class="cicon">📍</span>
+        <div class="cdetail">
+          <strong>Address</strong>
+          3/2227, Pipardi Sheri,<br>
+          Opp. Salabatpura Police Chowki,<br>
+          Salabatpura, Surat — Gujarat, India
+        </div>
+      </div>
+      <div class="citem">
+        <span class="cicon">📞</span>
+        <div class="cdetail">
+          <strong>Phone</strong>
+          <a href="tel:+919909920220">+91 99099 20220</a><br>
+          <a href="tel:+919898576754">+91 98985 76754</a>
+        </div>
+      </div>
+      <div class="citem">
+        <span class="cicon">💬</span>
+        <div class="cdetail">
+          <strong>WhatsApp</strong>
+          <a href="https://wa.me/919898576754" target="_blank">Chat with us on WhatsApp →</a>
+        </div>
+      </div>
+      <div class="citem">
+        <span class="cicon">✉️</span>
+        <div class="cdetail">
+          <strong>Email</strong>
+          <a href="mailto:info@shashwatoverseas.com">info@shashwatoverseas.com</a>
+        </div>
+      </div>
+      <div class="citem">
+        <span class="cicon">🌐</span>
+        <div class="cdetail">
+          <strong>Website</strong>
+          <a href="https://www.shashwatoverseas.com">www.shashwatoverseas.com</a>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="map-wrap">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.9!2d72.8315!3d21.2125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDEyJzQ1LjAiTiA3MsKwNDknNTMuNCJF!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+          width="100%" height="300" style="border:0;display:block;" allowfullscreen loading="lazy">
+        </iframe>
+      </div>
+      <a href="https://maps.app.goo.gl/WVQFnvFUxGazG3a68" target="_blank" class="map-link">📍 View on Google Maps →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">
+    <img src="logo.png" alt="Shashwat Overseas LLP"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+    <div class="fallback-name" style="display:none;">Shashwat Overseas LLP<sup style="font-size:12px">®</sup></div>
+  </div>
+  <div class="footer-tag">Perfection in Every Creation</div>
+  <div class="f-links">
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#about">About</a>
+    <a href="#why">Why Us</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <p>3/2227 Pipardi Sheri, Salabatpura, Surat — Gujarat, India</p>
+  <p style="margin-top:10px;">© 2025 Shashwat Overseas LLP. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
